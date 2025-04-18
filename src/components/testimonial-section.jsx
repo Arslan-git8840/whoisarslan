@@ -12,7 +12,7 @@ const font_2 = Kalam({
 export function Testimonial() {
   return (
     <div className="px-2 pb-6 md:px-8">
-      <h2 className={`text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-center md:mb-10 mb-3 py-2 ${font_2.className}`}>
+      <h2 className={`text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-center lg:mb-10 mb-3 md:mt-0 mt-2 py-2 ${font_2.className}`}>
         What People Say About Me
       </h2>
 

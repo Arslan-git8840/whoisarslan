@@ -56,8 +56,8 @@ Button.displayName = "Button";
 // Contact Section
 export function Contact() {
     return (
-        <section className="py-4 px-4 md:px-8">
-            <h2 className={`text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-center mb-8 ${font_2.className}`}>
+        <section className="lg:py-4 py-0 px-4 md:px-8">
+            <h2 className={`text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-center lg:mb-8 mb-4 ${font_2.className}`}>
                     Let's Connect
                 </h2>
             <div className="max-w-3xl mx-auto backdrop-blur-xl border border-white/10 bg-white/5 p-8 rounded-3xl shadow-2xl relative">
