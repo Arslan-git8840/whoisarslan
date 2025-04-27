@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { IconUser, IconMail, IconMessageDots } from "@tabler/icons-react";
 import { Kalam } from "next/font/google";
 
@@ -53,20 +53,55 @@ const Button = React.forwardRef(({ className, ...props }, ref) => (
 ));
 Button.displayName = "Button";
 
-// Contact Section
+
 export function Contact() {
+    const [loading, setLoading] = useState(false);
+
+    const handleSubmit = async (e) => {
+        try {
+            e.preventDefault();
+
+            const form = e.target;
+            const formdata = new FormData(form);
+
+            const data = {
+                email: formdata.get("email"),
+                message: formdata.get("message"),
+            };
+            setLoading(true);
+            const response = await fetch('/api/mail-service', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+                console.log('Email sent successfully');
+                form.reset();
+            }
+        } catch (error) {
+            console.error('Error sending email:', error);
+            setLoading(false);
+        } finally {
+            setLoading(false);
+            form.reset();
+        }
+    };
+
     return (
-        <section className="lg:py-4 py-0 px-4 md:px-8">
+        <section className="px-1 md:px-8 pb-10">
             <h2 className={`text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-center lg:mb-8 mb-4 ${font_2.className}`}>
-                    Let's Connect
-                </h2>
-            <div className="max-w-3xl mx-auto backdrop-blur-xl border border-white/10 bg-white/5 p-8 rounded-3xl shadow-2xl relative">
+                Let's Connect
+            </h2>
+            <div className="max-w-3xl mx-auto backdrop-blur-xl border border-white/10 bg-white/5 sm:p-8 p-2 rounded-3xl shadow-2xl relative">
                 <h2 className={`text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-center mb-8 ${font_2.className}`}>
                     {/* Let's Connect — I'd Love to Hear From You!
                     Diga Olá — Say Hello 👋 */}
                 </h2>
 
-                <h2 className={`text-center text-4xl text-gray-200 ${font_2.className} mb-8`}>
+                <h2 className={`text-center sm:text-4xl text-2xl text-gray-200 ${font_2.className} mb-8`}>
                     नमस्ते! — Hello there! — Olá, tudo bem? — 你好！— 안녕하세요!
                     <br />
                     <span className="text-base text-white/70 block mt-2 leading-relaxed">
@@ -76,13 +111,14 @@ export function Contact() {
                 </h2>
 
 
-                <form className={`space-y-6 ${font_2.className}`}>
+                <form className={`space-y-6 ${font_2.className}`} onSubmit={handleSubmit}>
 
                     {/* Name */}
                     <div className="relative">
                         <IconUser className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
                         <Input
                             type="text"
+                            name="name"
                             placeholder="🙋‍♂️ नाम / Name / Nome / 名字 / 이름"
                             className="pl-10 focus:ring-2 focus:ring-cyan-500"
                         />
@@ -93,6 +129,7 @@ export function Contact() {
                         <IconMail className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
                         <Input
                             type="email"
+                            name="email"
                             placeholder="📧 ईमेल / Email / Correio / 电子邮件 / 이메일"
                             className="pl-10 focus:ring-2 focus:ring-purple-500"
                         />
@@ -103,14 +140,37 @@ export function Contact() {
                         <IconMessageDots className="absolute left-3 top-4 text-gray-400" />
                         <Textarea
                             placeholder="💬 सन्देश लिखें / Write a message / Escreva uma mensagem / 留言 / 메시지를 작성하세요"
+                            name="message"
                             rows={5}
                             className="pl-10 pt-3 focus:ring-2 focus:ring-purple-500"
                         />
                     </div>
 
                     {/* Submit Button */}
-                    <Button type="submit" className="w-full">
-                        Send Message
+                    <Button type="submit" className="w-full flex items-center justify-center gap-2">
+                        {loading ? (
+                            <>
+                                <svg className="animate-spin h-5 w-5 text-white" viewBox="0 0 24 24">
+                                    <circle
+                                        className="opacity-25"
+                                        cx="12"
+                                        cy="12"
+                                        r="10"
+                                        stroke="currentColor"
+                                        strokeWidth="4"
+                                        fill="none"
+                                    />
+                                    <path
+                                        className="opacity-75"
+                                        fill="currentColor"
+                                        d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                                    />
+                                </svg>
+                                Sending...
+                            </>
+                        ) : (
+                            "Send Message"
+                        )}
                     </Button>
                 </form>
 
