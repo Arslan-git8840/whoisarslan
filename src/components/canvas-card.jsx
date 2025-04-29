@@ -11,7 +11,7 @@ export function CardSpotlightDemo() {
   return (
     <div className="space-y-4 px-2 md:px-0 selection:bg-pink-700">
       <CardSpotlight className="max-w-5xl mx-auto w-full rounded-xl">
-        <p className={`text-2xl sm:text-3xl font-bold relative z-20 mt-2 text-white ${kalam.className}`}>
+        <p className={`text-xl sm:text-3xl font-bold relative z-20 mt-2 text-white ${kalam.className}`}>
           University Library Management System
         </p>
 
@@ -43,7 +43,7 @@ export function CardSpotlightDemo() {
 
       <CardSpotlight className="max-w-5xl mx-auto w-full rounded-xl">
         <p
-          className={`text-2xl sm:text-3xl font-bold relative z-20 mt-2 text-white ${kalam.className} selection:bg-gray-700`}
+          className={`text-xl sm:text-3xl font-bold relative z-20 mt-2 text-white ${kalam.className} selection:bg-gray-700`}
         >
           Chat with PDF — AI Document Assistant
         </p>

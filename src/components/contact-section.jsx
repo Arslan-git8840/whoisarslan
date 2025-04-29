@@ -92,7 +92,7 @@ export function Contact() {
 
     return (
         <section className="px-1 md:px-8 pb-10">
-            <h2 className={`text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-center lg:mb-8 mb-4 ${font_2.className}`}>
+            <h2 className={`md:text-4xl text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-center lg:mb-8 mb-4 ${font_2.className}`}>
                 Let's Connect
             </h2>
             <div className="max-w-3xl mx-auto backdrop-blur-xl border border-white/10 bg-white/5 sm:p-8 p-2 rounded-3xl shadow-2xl relative">
@@ -101,7 +101,7 @@ export function Contact() {
                     Diga Olá — Say Hello 👋 */}
                 </h2>
 
-                <h2 className={`text-center sm:text-4xl text-2xl text-gray-200 ${font_2.className} mb-8`}>
+                <h2 className={`text-center sm:text-3xl lg:text-4xl text-xl text-gray-200 ${font_2.className} sm:mb-8 mb-4`}>
                     नमस्ते! — Hello there! — Olá, tudo bem? — 你好！— 안녕하세요!
                     <br />
                     <span className="text-base text-white/70 block mt-2 leading-relaxed">
@@ -111,7 +111,7 @@ export function Contact() {
                 </h2>
 
 
-                <form className={`space-y-6 ${font_2.className}`} onSubmit={handleSubmit}>
+                <form className={`sm:space-y-6 space-y-3 ${font_2.className}`} onSubmit={handleSubmit}>
 
                     {/* Name */}
                     <div className="relative">
