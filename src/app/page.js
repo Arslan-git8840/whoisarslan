@@ -1,10 +1,10 @@
-import { BgLines } from "@/components/bg-lines";
+import { Main } from "@/components/bg-lines";
 
 
 export default function Home() {
   return (
     <div>
-      <BgLines/>
+      <Main/>
     </div>
   );
 }

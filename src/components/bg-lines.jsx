@@ -23,7 +23,7 @@ const font_2 = Kalam({
 
 
 
-export function BgLines() {
+export function Main() {
   return (
     <div className="bg-black selection:bg-pink-700">
 
