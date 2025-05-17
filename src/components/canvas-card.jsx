@@ -9,7 +9,97 @@ const kalam = Kalam({
 
 export function CardSpotlightDemo() {
   return (
-    <div className="space-y-4 px-2 md:px-0 selection:bg-pink-700">
+    <div className="space-y-4 px-0 selection:bg-pink-700">
+
+      {/* for the-bazaar e-commerce */}
+      <CardSpotlight className="max-w-5xl mx-auto w-full rounded-xl">
+        <p
+          className={`text-xl sm:text-3xl font-bold relative z-20 mt-2 text-white ${kalam.className} selection:bg-yellow-700`}
+        >
+          🛍️ The Bazaar — Modern E-Commerce Platform
+        </p>
+
+        <div className="text-neutral-200 mt-4 relative z-20 text-base sm:text-lg">
+          Complete e-commerce experience with advanced features:
+          <ul className="mt-4 space-y-3">
+            <Step title="🛒 Add & manage products easily" delay="100" />
+            <Step title="📊 Admin dashboard with analytics" delay="200" />
+            <Step title="👤 User login & authentication" delay="300" />
+            <Step title="💳 Stripe payment integration" delay="400" />
+            <Step title="📦 Track orders and inventory" delay="500" />
+          </ul>
+        </div>
+
+        <p className="text-neutral-400 mt-3 relative z-20 text-sm sm:text-base">
+          Designed to give both customers and admins a seamless experience from browsing to checkout.
+        </p>
+
+        <a
+          href="https://the-bazaar-mocha.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 mt-3 px-4 py-2 text-neutral-200 font-semibold rounded-lg shadow-md transition relative z-20 border-b-2"
+        >
+          🛍️ Visit Bazaar Website
+        </a>
+
+        <div className="relative mt-4">
+          {/* MacBook image */}
+          <img src="/macbook 8.png" alt="macbook" className="" />
+
+          {/* Overlay: Bazaar site preview */}
+          <img
+            src="/creams2.png"
+            alt="bazaar-preview"
+            className="absolute top-[2.7%] left-[11%] w-[78%] h-[90.5%] object-cover rounded-xl"
+          />
+        </div>
+      </CardSpotlight>
+
+      {/* for coursora ai-powered course generator */}
+      <CardSpotlight className="max-w-5xl mx-auto w-full rounded-xl">
+        <p
+          className={`text-xl sm:text-3xl font-bold relative z-20 mt-2 text-white ${kalam.className} selection:bg-blue-700`}
+        >
+          🧠 Coursora — AI-Powered Course Generator
+        </p>
+
+        <div className="text-neutral-200 mt-4 relative z-20 text-base sm:text-lg">
+          Create custom educational content using AI:
+          <ul className="mt-4 space-y-3">
+            <Step title="📚 Select a course category" delay="100" />
+            <Step title="🧠 Generate complete course layout with lessons" delay="200" />
+            <Step title="🎥 Auto-generate video content" delay="300" />
+            <Step title="💻 For programming: code examples included" delay="400" />
+            <Step title="🔗 Useful links and references provided" delay="500" />
+          </ul>
+        </div>
+
+        <p className="text-neutral-400 mt-3 relative z-20 text-sm sm:text-base">
+          Whether you're a student or educator, Coursora builds structured, dynamic learning paths with a click.
+        </p>
+
+        <a
+          href="https://coursora.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 mt-3 px-4 py-2 text-neutral-200 font-semibold rounded-lg shadow-md transition relative z-20 border-b-2"
+        >
+          🧠 Visit Coursora Website
+        </a>
+
+        <div className="relative mt-4">
+          {/* MacBook image */}
+          <img src="/macbook 8.png" alt="macbook" className="" />
+
+          {/* Overlay: Coursora site preview */}
+           <img
+            src="/creams2.png"
+            alt="bazaar-preview"
+            className="absolute top-[2.7%] left-[11%] w-[78%] h-[90.5%] object-cover rounded-xl"
+          />
+        </div>
+      </CardSpotlight>
 
       {/* for university-lib-management system */}
       <CardSpotlight className="max-w-5xl mx-auto w-full rounded-xl">
@@ -74,6 +164,16 @@ export function CardSpotlightDemo() {
           Built with LangChain and AI to give you superpowers with documents.
         </p>
 
+        <a
+          href="https://chatpdf-159u.onrender.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 mt-3 px-4 py-2 text-neutral-200 font-semibold rounded-lg shadow-md transition relative z-20 border-b-2"
+        >
+          💬 Visit ChatPdf
+        </a>
+
+
         <div className="relative mt-4">
           {/* MacBook image */}
           <img src="/macbook 8.png" alt="macbook" className="" />
@@ -82,51 +182,6 @@ export function CardSpotlightDemo() {
           <img
             src="/creams2.png"
             alt="Chat PDF preview"
-            className="absolute top-[2.7%] left-[11%] w-[78%] h-[90.5%] object-cover rounded-xl"
-          />
-        </div>
-      </CardSpotlight>
-
-      {/* for the-bazaar e-commerce */}
-      <CardSpotlight className="max-w-5xl mx-auto w-full rounded-xl">
-        <p
-          className={`text-xl sm:text-3xl font-bold relative z-20 mt-2 text-white ${kalam.className} selection:bg-yellow-700`}
-        >
-          🛍️ The Bazaar — Modern E-Commerce Platform
-        </p>
-
-        <div className="text-neutral-200 mt-4 relative z-20 text-base sm:text-lg">
-          Complete e-commerce experience with advanced features:
-          <ul className="mt-4 space-y-3">
-            <Step title="🛒 Add & manage products easily" delay="100" />
-            <Step title="📊 Admin dashboard with analytics" delay="200" />
-            <Step title="👤 User login & authentication" delay="300" />
-            <Step title="💳 Stripe payment integration" delay="400" />
-            <Step title="📦 Track orders and inventory" delay="500" />
-          </ul>
-        </div>
-
-        <p className="text-neutral-400 mt-3 relative z-20 text-sm sm:text-base">
-          Designed to give both customers and admins a seamless experience from browsing to checkout.
-        </p>
-
-        <a
-          href="https://the-bazaar-mocha.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 mt-3 px-4 py-2 text-neutral-200 font-semibold rounded-lg shadow-md transition relative z-20 border-b-2"
-        >
-          🛍️ Visit Bazaar Website
-        </a>
-
-        <div className="relative mt-4">
-          {/* MacBook image */}
-          <img src="/macbook 8.png" alt="macbook" className="" />
-
-          {/* Overlay: Bazaar site preview */}
-          <img
-            src="/creams2.png"
-            alt="bazaar-preview"
             className="absolute top-[2.7%] left-[11%] w-[78%] h-[90.5%] object-cover rounded-xl"
           />
         </div>
